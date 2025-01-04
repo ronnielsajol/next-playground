@@ -18,7 +18,7 @@ const Page = () => {
 		};
 	}, []);
 
-	const size = isHovered ? 300 : 30;
+	const size = isHovered ? 300 : 20;
 
 	return (
 		<main className='flex items-center justify-center h-screen w-screen flex-col'>

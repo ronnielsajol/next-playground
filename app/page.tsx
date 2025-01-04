@@ -1,9 +1,22 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
+
 import "./styles.css";
 export default function Home() {
+	useEffect(() => {
+		const lenis = new Lenis();
+
+		function raf(time: number) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+
+		requestAnimationFrame(raf);
+	}, []);
+
 	return (
 		<main className='relative'>
 			<svg xmlns='http://www.w3.org/2000/svg' width='451' height='437'>
