@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider, SignInButton, SignOutButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-
+import Noise from "@/components/Noise";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,21 +15,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<ClerkProvider>
-			<html lang='en'>
-				<body className={inter.className}>
-					<header>
-						<SignedOut>
-							<SignInButton />
-						</SignedOut>
-						<SignedIn>
-							<UserButton />
-							<SignOutButton />
-						</SignedIn>
-					</header>
-					<main>{children}</main>
-				</body>
-			</html>
-		</ClerkProvider>
+		<html lang='en'>
+			<body className={"min-w-full flex justify-center m-auto items-center relative antialiased"}>
+				{children}
+				<Noise />
+			</body>
+		</html>
 	);
 }

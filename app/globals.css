@@ -3,31 +3,85 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	--black: #0f1115;
+	--white: #f5f5f5;
+	--yellow: #fff312;
+	--hue-0: var(--yellow);
+	--hue-1: #f08;
+	--hue-2: #d0e;
+	--hue-3: #91f;
+	--hue-4: #0d63f8;
+	--hue-5: #0cdcf7;
+	--hue-6: #4ff0b7;
+	--hue-0-transparent: #fff31244;
+	--hue-1-transparent: #ff008844;
+	--hue-2-transparent: #dd00ee44;
+	--hue-3-transparent: #9911ff44;
+	--hue-4-transparent: #0d63f844;
+	--hue-5-transparent: #0cdcf744;
+	--hue-6-transparent: #4ff0b744;
+	--accent: var(--hue-4);
+	--accent-transparent: var(--hue-4-transparent);
+	--layer: #14171c;
+	--divider: #1a1e26;
+	--border: #2b323d;
+	--feint-text: #586d8c;
+	--dot-size: 1px;
+	--gap-size: 20px;
+	--offset: calc(var(--gap-size) / 2);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: var(--white);
+	background-image: linear-gradient(var(--black) 90%, transparent 100%),
+		radial-gradient(var(--accent) var(--dot-size), transparent var(--dot-size)),
+		radial-gradient(var(--accent) var(--dot-size), transparent var(--dot-size));
+	background-position: 0 0, 0 0, var(--offset) var(--offset);
+	background-size: 100% 100%, var(--gap-size) var(--gap-size), var(--gap-size) var(--gap-size);
+	background-color: var(--black);
+
+	font-family: Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+	min-height: 100svh;
+}
+
+.noise-container {
+	position: fixed;
+	flex: none;
+	inset: 0;
+	pointer-events: none;
+	z-index: 10;
+}
+
+.noise {
+	width: 100%;
+	height: 100%;
+	background-size: 109px;
+	background-repeat: repeat;
+	background-image: url("/noise.png");
+	opacity: 0.06;
+	border-radius: 0;
+}
+
+.mask {
+	mask-image: url("/mask.svg");
+	background: #757de8;
+	mask-repeat: no-repeat;
+	mask-size: 50px;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+h1 {
+	cursor: default;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 }
