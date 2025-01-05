@@ -40,7 +40,7 @@ const Section2 = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> })
 	return (
 		<motion.div
 			style={{ scale, rotate }}
-			className='h-screen text-[3.5vw] flex flex-col items-center justify-center relative bg-lime-700'>
+			className='h-screen text-[3.5vw] flex flex-col items-center justify-center relative bg-lime-800'>
 			<p>Page 2</p>
 		</motion.div>
 	);
