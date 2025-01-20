@@ -80,6 +80,11 @@ h1 {
 	cursor: default;
 }
 
+.logo-mask {
+	mask-size: 10px 10px;
+	mask-image: radial-gradient(black 1px, transparent 1px);
+}
+
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
