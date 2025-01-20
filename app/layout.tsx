@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={"min-w-full flex justify-center m-auto items-center relative antialiased"}>
+			<body className={"relative antialiased"}>
 				{children}
 				<Noise />
 			</body>

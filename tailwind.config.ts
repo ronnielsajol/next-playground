@@ -11,6 +11,7 @@ const config: Config = {
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+<<<<<<< HEAD
 	darkMode: "class",
 	theme: {},
 	plugins: [
@@ -38,6 +39,17 @@ const config: Config = {
 			);
 		},
 	],
+=======
+	theme: {
+		extend: {
+			colors: {
+				background: "#0f1115",
+				foreground: "var(--foreground)",
+			},
+		},
+	},
+	plugins: [],
+>>>>>>> 42043bb5d6c2b960750132c7c2fad4ed04b8982c
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
