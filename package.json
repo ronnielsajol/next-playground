@@ -16,12 +16,9 @@
 		"clsx": "^2.1.1",
 		"drizzle-orm": "^0.33.0",
 		"express": "^4.19.2",
-<<<<<<< HEAD
 		"framer-motion": "^11.18.1",
+		"lenis": "^1.1.19",
 		"mini-svg-data-uri": "^1.4.4",
-=======
-		"lenis": "^1.1.18",
->>>>>>> 42043bb5d6c2b960750132c7c2fad4ed04b8982c
 		"motion": "^11.14.4",
 		"mysql2": "^3.11.0",
 		"next": "14.2.5",
