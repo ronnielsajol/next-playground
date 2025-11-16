@@ -33,7 +33,9 @@ const Page = () => {
 				<motion.div
 					className='absolute left-0 right-0 top-0 bg-grid-white/[0.2] w-full h-full '
 					ref={ref}
-					style={{ backgroundPositionY: yTranslation }}></motion.div>
+					style={{ backgroundPositionY: yTranslation }}>
+					<div className='bg-black'>🌸</div>
+				</motion.div>
 			</section>
 		</main>
 	);
