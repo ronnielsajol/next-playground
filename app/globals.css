@@ -29,6 +29,7 @@
 	--dot-size: 1px;
 	--gap-size: 20px;
 	--offset: calc(var(--gap-size) / 2);
+	--progress1: 0;
 }
 
 body {
